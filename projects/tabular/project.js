@@ -20,7 +20,7 @@ window.G1.projects.push({
   ],
   owners: ["Phan Thị Minh Thơ"],
   status: "planned",
-  links: { notebook: null, report: null, video: null },
+  links: { notebook: null, report: null, slides: null, video: null },
   results: null,
   questions: null,
 });

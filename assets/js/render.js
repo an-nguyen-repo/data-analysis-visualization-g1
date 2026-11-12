@@ -38,7 +38,7 @@
 
     projectsEyebrow: "Projects",
     projectsTitle: "One project per data type.",
-    projectsLead: "Each project has its own page with the problem, dataset, workflow and results, plus links to the notebook, PDF report and video.",
+    projectsLead: "Each project has its own page with the problem, dataset, workflow and results, plus links to the notebook, PDF report, slideshow and video.",
     dataset: "Dataset",
     owners: "Owner",
     details: "View details",
@@ -52,6 +52,7 @@
     matNotebook: "Notebook (GitHub)",
     matColab: "Open in Colab",
     matReport: "PDF report",
+    matSlides: "Slideshow (HTML)",
     matVideo: "YouTube video",
 
     home: "Home",
@@ -93,6 +94,7 @@
     image: '<rect x="3.5" y="4.5" width="17" height="15"/><circle cx="15.5" cy="9.5" r="1.75"/><path d="m3.5 17 5-5 4.5 4.5 2.5-2.5 5 5"/>',
     code: '<path d="m8.5 7-5 5 5 5M15.5 7l5 5-5 5"/>',
     play: '<path d="M7 4.5v15l12-7.5z"/>',
+    slides: '<rect x="3.5" y="4.5" width="17" height="11"/><path d="M12 15.5v4M8 19.5h8M8 12l3-3 2 2 3-3"/>',
     doc: '<path d="M6 3.5h8l4.5 4.5v12.5H6z"/><path d="M14 3.5V8h4.5M9 12.5h6M9 16h4"/>',
     video: '<rect x="3" y="6" width="13" height="12"/><path d="m16 10.5 5-3v9l-5-3"/>',
     github: '<path d="M9 19c-4.3 1.4-4.3-2.5-6-3m12 5v-3.5c0-1 .1-1.4-.5-2 2.8-.3 5.5-1.4 5.5-6a4.6 4.6 0 0 0-1.3-3.2 4.2 4.2 0 0 0-.1-3.2s-1.1-.3-3.5 1.3a12 12 0 0 0-6.2 0C6.5 2.8 5.4 3.1 5.4 3.1a4.2 4.2 0 0 0-.1 3.2A4.6 4.6 0 0 0 4 9.5c0 4.6 2.7 5.7 5.5 6-.6.6-.6 1.2-.5 2V21"/>',
@@ -168,6 +170,7 @@
       { label: T.matNotebook, icon: "code", url: nb ? (isAbs(nb) ? nb : `${repoUrl}/blob/${D.repo.branch}/${nb}`) : null },
       { label: T.matColab, icon: "play", url: nb && !isAbs(nb) ? `https://colab.research.google.com/github/${D.repo.owner}/${D.repo.name}/blob/${D.repo.branch}/${nb}` : null },
       { label: T.matReport, icon: "doc", url: l.report ? (isAbs(l.report) ? l.report : ROOT + l.report) : null },
+      { label: T.matSlides, icon: "slides", url: l.slides ? (isAbs(l.slides) ? l.slides : ROOT + l.slides) : null },
       { label: T.matVideo, icon: "video", url: l.video || null },
     ];
   }

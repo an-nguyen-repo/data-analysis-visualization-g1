@@ -29,7 +29,7 @@ window.G1.projects.push({
   ],
   owners: ["Phan Thị Minh Thơ", "Nguyễn Thị Thu An"],
   status: "done",
-  links: { notebook: "projects/image/image.ipynb", report: "projects/image/image-report.pdf", video: null },
+  links: { notebook: "projects/image/image.ipynb", report: "projects/image/image-report.pdf", slides: "projects/image/slides.html", video: null },
   results: [
     {
       title: "Test set: 5,040 photos, 30 dishes (same Logistic Regression / softmax head for all three)",
