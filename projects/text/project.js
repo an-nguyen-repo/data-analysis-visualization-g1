@@ -29,7 +29,7 @@ window.G1.projects.push({
   ],
   owners: ["Nguyễn Thị Thu An"],
   status: "done",
-  links: { notebook: "projects/text/text.ipynb", report: "projects/text/text-report.pdf", video: null },
+  links: { notebook: "projects/text/text.ipynb", report: "projects/text/text-report.pdf", slides: "projects/text/slides.html", video: null },
   results: [
     {
       title: "Task 1: `sentiment`",
