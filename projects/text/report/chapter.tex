@@ -34,7 +34,7 @@ lỗi. Notebook chạy được trên Google Colab với \textit{Runtime > Run a
         đề, nên nhãn chủ đề kém chắc chắn hơn.
 \end{itemize}
 
-Nhóm giữ nguyên cách chia train / dev / test của tác giả và dùng làm train / validation / test, để kết quả so sánh được
+Nhóm giữ nguyên cách chia train / dev / test của tác giả và dùng làm train / val / test, để kết quả so sánh được
 với bài báo gốc (Bảng~\ref{tab:text-split}). Bộ dữ liệu đáp ứng yêu cầu của đề với dữ liệu văn bản: 16 175 câu, nhiều
 hơn mức tối thiểu 2 000, và 99.9\% số câu có chữ tiếng Việt có dấu.
 
@@ -45,7 +45,7 @@ hơn mức tối thiểu 2 000, và 99.9\% số câu có chữ tiếng Việt c�
 Tập & Số câu & Tỉ lệ & Tỉ lệ \texttt{neutral} \\
 \midrule
 train & 11 426 & 70.6\% & 4.0\% \\
-validation & 1 583 & 9.8\% & 4.6\% \\
+val & 1 583 & 9.8\% & 4.6\% \\
 test & 3 166 & 19.6\% & 5.3\% \\
 \bottomrule
 \end{tabular}
@@ -61,10 +61,10 @@ Mục này chỉ chẩn đoán vấn đề; cách xử lý được áp dụng �
 \toprule
 Vấn đề & Kết quả kiểm tra & Cách xử lý \\
 \midrule
-Giá trị thiếu, câu rỗng & 0 câu & giữ bước lọc để an toàn \\
+Giá trị thiếu, câu rỗng & 0 câu & nếu có thì bỏ khỏi train/val/test \\
 Unicode không ở dạng NFC & 0 câu & vẫn chuẩn hóa NFC cho câu mới \\
 Câu trùng trong train & 1 câu, hai bản mang nhãn trái ngược & bỏ bản lặp khỏi train \\
-Câu train có trong validation/test & 0 câu & không cần xử lý \\
+Câu train có trong val/test & 0 câu & nếu có thì bỏ khỏi train \\
 Câu rất ngắn / rất dài & 141 câu không quá 2 từ, 663 câu trên 30 từ & giữ lại, vì đều là câu trả lời thật \\
 Tên ẩn danh \texttt{wzjwz<số>} & 211 câu, 233 mã khác nhau & thay bằng một token chung \texttt{personname} \\
 Biểu tượng cảm xúc (\texttt{colonsmile}, ...) & 85 câu & giữ lại vì mang cảm xúc \\
