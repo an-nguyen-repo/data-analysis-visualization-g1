@@ -14,7 +14,7 @@ window.G1 = {
     lead: "Group G1 analyses three types of data (tabular, text and images) for the course Programming Foundations for Data Analysis and Visualization at Ho Chi Minh City University of Technology, VNU-HCM.",
   },
 
-  repo: { owner: "minhtho1503", name: "data-analysis-visualization-g1", branch: "main" },
+  repo: { owner: "an-nguyen-repo", name: "data-analysis-visualization-g1", branch: "main" },
 
   members: [
     { name: "Phan Thị Minh Thơ", id: "2470112", role: "Tabular and image data", topics: ["tabular", "image"], github: "https://github.com/minhtho1503" },
